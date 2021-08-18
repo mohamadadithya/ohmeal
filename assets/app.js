@@ -86,16 +86,20 @@ searchForm.onsubmit = (e) => {
 }
 
 const searchMeals = (meals) => {
-  mealCards.innerHTML = ''
-  meals.forEach((meal) => {
-    mealCards.innerHTML += `<div class="flex meal-card" id="meal-card" data-id="${meal.idMeal}" onclick="getMealById(this)">
-    <img src="${meal.strMealThumb}" alt="Meal" class="image mr-1">
-    <div class="flex column">
-      <h3 class="name">${meal.strMeal}</h3>
-      <p class="area text-gray">${meal.strArea}</p>
-    </div>
-  </div>`
-  })
+  if (meals) {
+    mealCards.innerHTML = ''
+    meals.forEach((meal) => {
+      mealCards.innerHTML += `<div class="flex meal-card" id="meal-card" data-id="${meal.idMeal}" onclick="getMealById(this)">
+      <img src="${meal.strMealThumb}" alt="Meal" class="image mr-1">
+      <div class="flex column">
+        <h3 class="name">${meal.strMeal}</h3>
+        <p class="area text-gray">${meal.strArea}</p>
+      </div>
+    </div>`
+    })
+  } else {
+    mealCards.innerHTML = `<p>Sorry, meal not found</p>`
+  }
 }
 
 const getMealById = (el) => {
