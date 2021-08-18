@@ -1,0 +1,67 @@
+<!-- Copyright 2021 by Mohamad Adithya -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OhMeal</title>
+    <link rel="stylesheet" href="/assets/main.css" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="logo">OhMeal</h1>
+      <p class="description">OhMeal is a website to get random meal recipe and tutorial</p>
+      <button class="btn black" id="random-meal-btn">Random 🍕</button>
+      <button class="btn black" id="search-meal-btn">Search 🔎</button>
+      <p class="copyright">&copy; 2021 by Mohamad Adithya</p>
+    </div>
+    <section class="meal">
+      <div class="container">
+        <div class="flex align-center">
+          <button class="btn-back btn-1 mr-1" id="back-btn"><i class="far fa-fw fa-arrow-left"></i></button>
+          <div class="column">
+            <h1 class="meal__name"></h1>
+            <p class="meal__area text-gray"></p>
+          </div>
+        </div>
+        <div class="meal__details">
+          <img class="meal__img mb-1">
+          <h4 class="subtitle">Ingredients</h4>
+          <ul class="meal__ingredients mb-1"></ul>
+          <h4 class="subtitle">Instructions</h4>
+          <p class="meal__instructions mb-1"></p>
+          <div class="video-container">
+            <h4 class="subtitle">Video</h4>
+            <iframe class="meal__video"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="meal meals">
+      <div class="container">
+        <div class="flex align-center mb-1">
+          <button class="btn-back btn-2 mr-1" id="back-btn"><i class="far fa-fw fa-arrow-left"></i></button>
+          <form class="search-form">
+            <input type="text" class="search-input" id="search-input" placeholder="Enter your keyword" />
+          </form>
+        </div>
+        <div class="meal-cards"></div>
+      </div>
+    </section>
+    <div class="loader">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script src="/assets/app.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
+<!-- Copyright 2021 by Mohamad Adithya -->
