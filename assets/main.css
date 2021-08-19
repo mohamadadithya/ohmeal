@@ -23,6 +23,10 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   width: 100%;
   -o-object-fit: cover;
@@ -205,6 +209,15 @@ img {
   margin-bottom: 1rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+}
+
+.meals .meal-card:hover {
+  -webkit-transform: scale(.96);
+      -ms-transform: scale(.96);
+          transform: scale(.96);
 }
 
 .meals .meal-card .image {
