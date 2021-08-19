@@ -76,6 +76,7 @@ searchForm.onsubmit = (e) => {
   showLoading()
   const searchInput = searchForm.querySelector('.search-input')
   let keyword = searchInput.value
+  searchInput.blur()
 
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword}`)
     .then(res => res.json())
